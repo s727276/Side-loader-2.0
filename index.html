@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sideloader 2.0</title>
+</head>
+<body>
+    <h1>Sideloader 2.0</h1>
+    <form method="post" enctype="multipart/form-data">
+        Apple ID: <input type="text" name="apple_id"><br>
+        Password: <input type="password" name="password"><br>
+        UDID: <input type="text" name="udid"><br>
+        IPA File (optional): <input type="file" name="ipa"><br>
+        <button type="submit">Submit</button>
+    </form>
+    {% if ready %}
+        <h2>Downloads</h2>
+        <ul>
+            <li><a href="/download/signed.ipa">Download Signed IPA</a></li>
+            <li><a href="/download/certificate.p12">Download .p12</a></li>
+            <li><a href="/download/profile.mobileprovision">Download Profile</a></li>
+        </ul>
+    {% endif %}
+</body>
+</html>
